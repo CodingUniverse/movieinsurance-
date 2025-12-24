@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>剧组保险业务按钮设计规范</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .thumb-zone-safe {
+            background: radial-gradient(circle at 50% 100%, rgba(0, 82, 217, 0.1) 0%, transparent 70%);
+        }
+        /* Ticket Zigzag Edge */
+        .ticket-zigzag {
+            position: relative;
+            background: white;
+            filter: drop-shadow(0 20px 25px rgb(0 0 0 / 0.1));
+        }
+        .ticket-zigzag::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(-45deg, white 5px, transparent 0), 
+                        linear-gradient(45deg, white 5px, transparent 0);
+            background-size: 10px 10px;
+            background-repeat: repeat-x;
+        }
+        /* Signature Font Mock */
+        @font-face {
+            font-family: 'SignatureFont';
+            src: url('https://fonts.gstatic.com/s/nanummyeongjo/v22/67at7m929cy7adS2yN-Z6R_fTlvJpX_A.woff2');
+        }
+        .signature-text {
+            font-family: 'SignatureFont', cursive;
+            font-size: 2.4rem;
+            color: #004E92;
+            transform: rotate(-3deg);
+            display: inline-block;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        @keyframes shake {
+          0%, 100% { transform: translateX(0); }
+          25% { transform: translateX(-4px); }
+          75% { transform: translateX(4px); }
+        }
+        .animate-shake {
+          animation: shake 0.2s ease-in-out 0s 2;
+        }
+        /* Horizontal Signature Simulation */
+        .landscape-mode {
+          transform: rotate(90deg);
+          transform-origin: center center;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+</head>
+<body class="bg-[#F3F4F6] text-slate-900 transition-colors duration-300">
+    <div id="root"></div>
+</body>
+</html>
