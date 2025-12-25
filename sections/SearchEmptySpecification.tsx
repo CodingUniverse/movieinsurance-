@@ -33,7 +33,7 @@ const SearchEmptySpecification: React.FC<Props> = ({ isDarkMode }) => {
         </div>
         
         <div className={`p-8 rounded-[2rem] border overflow-hidden ${isDarkMode ? 'bg-slate-800 border-slate-700' : 'bg-white border-gray-100 shadow-sm'}`}>
-          <div className="max-w-md mx-auto space-y-8">
+          <div className="max-md mx-auto space-y-8">
             {/* Search Bar Demo */}
             <div className="space-y-4">
               <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">A. 搜索栏交互态</h4>
@@ -88,7 +88,7 @@ const SearchEmptySpecification: React.FC<Props> = ({ isDarkMode }) => {
                 <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">B. 模糊匹配与高亮</h4>
                 <div className="space-y-2">
                   {results.map((r, i) => (
-                    <div key={i} className={`p-4 rounded-2xl border flex items-center gap-3 ${isDarkMode ? 'bg-slate-700 border-slate-600' : 'bg-white border-gray-50 shadow-sm'}`}>
+                    <div key={i} className={`p-4 rounded-2xl border flex items-center gap-3 ${isDarkMode ? 'bg-slate-800 border-slate-600' : 'bg-white border-gray-50 shadow-sm'}`}>
                       <div className="w-10 h-10 bg-blue-50 text-[#004E92] rounded-xl flex items-center justify-center font-bold text-sm">企</div>
                       <div className="flex-1">
                         <p className="text-sm font-bold">
@@ -237,7 +237,7 @@ const SearchEmptySpecification: React.FC<Props> = ({ isDarkMode }) => {
                    <Button variant="primary" size="small" className="h-7 px-3">添加</Button>
                 </div>
                 <p className="text-[10px] text-slate-400 leading-relaxed italic">
-                  点击历史或快速筛选后，匹配词进行 1.0 -> 0.6 -> 1.0 的轻微闪烁，辅助视觉定位。
+                  点击历史或快速筛选后，匹配词进行 1.0 {'->'} 0.6 {'->'} 1.0 的轻微闪烁，辅助视觉定位。
                 </p>
               </div>
            </div>
